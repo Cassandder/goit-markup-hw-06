@@ -494,7 +494,6 @@ ul {
 .footer-line {
   display: flex;
   justify-content: space-between;
-  justify-content: baseline;
   align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -670,7 +669,6 @@ ul {
 
 .item-portfolio-bottom:not(:last-child) {
   margin-right: 8px;
-  flex-basis: calc((100% / - 40px) / 5);
   transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
@@ -919,9 +917,12 @@ ul {
 }
 
 .modal-term:checked + .modal-term-desc::before {
+  border-color: transparent;
   background-image: url(../images/icon-check.svg);
-  border: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
 }
+
 .modal-term:focus + .modal-term-desc::before {
   border: 2px solid var(--accent-color);
 }
